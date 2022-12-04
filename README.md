@@ -1,5 +1,7 @@
 # Bjurr BOM
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.bjurr.bom/bjurr-bom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/se.bjurr.bom/bjurr-bom)
+
 Some Maven stuff for my projects.
 
 ## Get Maven
@@ -26,9 +28,9 @@ You can add the BOM as a dependency:
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>reflectoring</groupId>
-                <artifactId>reflectoring-bom</artifactId>
-                <version>1.0</version>
+                <groupId>se.bjurr.bom</groupId>
+                <artifactId>bjurr-bom</artifactId>
+                <version>X</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -42,9 +44,9 @@ Or as a parent:
 ```xml
 <project>
     <parent>
-        <groupId>reflectoring</groupId>
-        <artifactId>reflectoring-bom</artifactId>
-        <version>1.0</version>
+        <groupId>se.bjurr.bom</groupId>
+        <artifactId>bjurr-bom</artifactId>
+        <version>X</version>
     </parent>
     <!--- ... //-->
 </project>
