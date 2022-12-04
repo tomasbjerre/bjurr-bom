@@ -59,5 +59,12 @@ Release and sign with:
 ./mvnw \
   release:prepare \
   release:perform \
-  -B
+  -B \
+  || git clean -f
+```
+
+To get signing working, there is a bug, you may need to do this first:
+
+```sh
+gpg -o /tmp/dummy --sign .gitignore
 ```
