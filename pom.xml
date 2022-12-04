@@ -144,6 +144,7 @@
 				<configuration>
 					<readableTagName>.*-(.*)$</readableTagName>
 					<file>CHANGELOG.md</file>
+					<ignoreCommitsIfMessageMatches>^\[maven-release-plugin\].*|^\[Gradle Release Plugin\].*|^Merge.*|.*\[GRADLE SCRIPT\].*</ignoreCommitsIfMessageMatches>
 				</configuration>
 			</plugin>
 			<plugin>
