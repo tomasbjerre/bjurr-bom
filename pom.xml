@@ -138,6 +138,16 @@
 				<version>3.2.0</version>
 			</plugin>
 			<plugin>
+				<groupId>se.bjurr.gitchangelog</groupId>
+				<artifactId>git-changelog-maven-plugin</artifactId>
+				<version>${changelog.version}</version>
+				<configuration>
+					<readableTagName>.*-(.*)$</readableTagName>
+					<file>CHANGELOG.md</file>
+					<updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>se.bjurr.violations</groupId>
 				<artifactId>violations-maven-plugin</artifactId>
 				<version>${violations.version}</version>
@@ -202,34 +212,6 @@
 			<id>release-sign-artifacts</id>
 			<build>
 				<plugins>
-					<plugin>
-						<groupId>se.bjurr.gitchangelog</groupId>
-						<artifactId>git-changelog-maven-plugin</artifactId>
-						<version>${changelog.version}</version>
-						<executions>
-							<execution>
-								<id>GenerateGitChangelog</id>
-								<phase>generate-sources</phase>
-								<goals>
-									<goal>git-changelog</goal>
-								</goals>
-								<configuration>
-									<readableTagName>.*-(.*)$</readableTagName>
-									<file>CHANGELOG.md</file>
-								</configuration>
-							</execution>
-							<execution>
-								<id>GenerateGitChangelogSemanticVersion</id>
-								<phase>generate-sources</phase>
-								<goals>
-									<goal>semantic-version</goal>
-								</goals>
-								<configuration>
-									<updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
