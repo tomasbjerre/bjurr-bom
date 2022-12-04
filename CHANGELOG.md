@@ -2,6 +2,13 @@
 
 Changelog of bjurr-bom.
 
+## 0.3.0 (2022-12-04)
+
+### Features
+
+-  testing ([0e067](https://github.com/tomasbjerre/bjurr-bom/commit/0e067e7c22fa94a) Tomas Bjerre)  
+-  testing ([2c612](https://github.com/tomasbjerre/bjurr-bom/commit/2c6124e840c3863) Tomas Bjerre)  
+
 ## 0.2.0 (2022-12-04)
 
 ### Features
