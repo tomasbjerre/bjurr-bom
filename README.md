@@ -59,7 +59,7 @@ Release and sign with:
 
 ```sh
 ./mvnw \
-  verify
+  verify \
   release:prepare \
   release:perform \
   -B \

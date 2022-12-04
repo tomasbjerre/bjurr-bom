@@ -2,6 +2,25 @@
 
 Changelog of bjurr-bom.
 
+## 0.0.7 (2022-12-04)
+
+### Features
+
+-  testing ([a4dc1](https://github.com/tomasbjerre/bjurr-bom/commit/a4dc1b4e19a8c06) Tomas Bjerre)  
+
+### Other changes
+
+**[maven-release-plugin] prepare release bjurr-bom-0.0.7**
+
+
+[4a470](https://github.com/tomasbjerre/bjurr-bom/commit/4a470b08da560fc) Tomas Bjerre *2022-12-04 10:26:56*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[4a234](https://github.com/tomasbjerre/bjurr-bom/commit/4a234f62630b53f) Tomas Bjerre *2022-12-04 10:25:07*
+
+
 ## 0.0.6 (2022-12-04)
 
 ### Features
