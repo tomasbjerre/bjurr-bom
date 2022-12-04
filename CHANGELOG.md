@@ -2,7 +2,54 @@
 
 Changelog of bjurr-bom.
 
-## 0.0.7 (2022-12-04)
+## bjurr-bom-0.2.0 (2022-12-04)
+
+### Features
+
+-  testing ([63dcf](https://github.com/tomasbjerre/bjurr-bom/commit/63dcf7b3b3cec2c) Tomas Bjerre)  
+
+### Other changes
+
+**[maven-release-plugin] prepare release bjurr-bom-0.2.0**
+
+
+[9c954](https://github.com/tomasbjerre/bjurr-bom/commit/9c9541c5dac498e) Tomas Bjerre *2022-12-04 11:13:25*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[92468](https://github.com/tomasbjerre/bjurr-bom/commit/92468b90c620e98) Tomas Bjerre *2022-12-04 11:12:27*
+
+
+## bjurr-bom-0.1.0 (2022-12-04)
+
+### Features
+
+-  testing ([55355](https://github.com/tomasbjerre/bjurr-bom/commit/553555aaf33fbb7) Tomas Bjerre)  
+-  testing ([3392c](https://github.com/tomasbjerre/bjurr-bom/commit/3392c9b2991441c) Tomas Bjerre)  
+-  testing ([24fee](https://github.com/tomasbjerre/bjurr-bom/commit/24fee6caa797ab2) Tomas Bjerre)  
+-  testing ([406ed](https://github.com/tomasbjerre/bjurr-bom/commit/406ed9051b3522e) Tomas Bjerre)  
+-  testing ([23b25](https://github.com/tomasbjerre/bjurr-bom/commit/23b25a60abf4cbc) Tomas Bjerre)  
+-  testing ([31cc8](https://github.com/tomasbjerre/bjurr-bom/commit/31cc897a8885f6d) Tomas Bjerre)  
+-  testing ([75954](https://github.com/tomasbjerre/bjurr-bom/commit/75954d17e72de4a) Tomas Bjerre)  
+-  testing ([052f3](https://github.com/tomasbjerre/bjurr-bom/commit/052f309e764385c) Tomas Bjerre)  
+-  testing ([ad8e2](https://github.com/tomasbjerre/bjurr-bom/commit/ad8e2d9df679ef0) Tomas Bjerre)  
+-  testing ([a829d](https://github.com/tomasbjerre/bjurr-bom/commit/a829ddc3205d010) Tomas Bjerre)  
+
+### Other changes
+
+**[maven-release-plugin] prepare release bjurr-bom-0.1.0**
+
+
+[c7181](https://github.com/tomasbjerre/bjurr-bom/commit/c71811d5444648f) Tomas Bjerre *2022-12-04 11:12:23*
+
+**[maven-release-plugin] prepare for next development iteration**
+
+
+[d1e57](https://github.com/tomasbjerre/bjurr-bom/commit/d1e579cd75f73ab) Tomas Bjerre *2022-12-04 10:26:59*
+
+
+## bjurr-bom-0.0.7 (2022-12-04)
 
 ### Features
 
@@ -21,7 +68,7 @@ Changelog of bjurr-bom.
 [4a234](https://github.com/tomasbjerre/bjurr-bom/commit/4a234f62630b53f) Tomas Bjerre *2022-12-04 10:25:07*
 
 
-## 0.0.6 (2022-12-04)
+## bjurr-bom-0.0.6 (2022-12-04)
 
 ### Features
 
@@ -40,7 +87,7 @@ Changelog of bjurr-bom.
 [a770b](https://github.com/tomasbjerre/bjurr-bom/commit/a770b837daec1e4) Tomas Bjerre *2022-12-04 10:15:41*
 
 
-## 0.0.5 (2022-12-04)
+## bjurr-bom-0.0.5 (2022-12-04)
 
 ### Features
 
@@ -59,7 +106,7 @@ Changelog of bjurr-bom.
 [1bb14](https://github.com/tomasbjerre/bjurr-bom/commit/1bb14f9d77bf9da) Tomas Bjerre *2022-12-04 10:10:38*
 
 
-## 0.0.4 (2022-12-04)
+## bjurr-bom-0.0.4 (2022-12-04)
 
 ### Features
 
@@ -78,7 +125,7 @@ Changelog of bjurr-bom.
 [b3753](https://github.com/tomasbjerre/bjurr-bom/commit/b37535f6dac7932) Tomas Bjerre *2022-12-04 10:04:33*
 
 
-## 0.0.3 (2022-12-04)
+## bjurr-bom-0.0.3 (2022-12-04)
 
 ### Other changes
 
@@ -93,7 +140,7 @@ Changelog of bjurr-bom.
 [ace97](https://github.com/tomasbjerre/bjurr-bom/commit/ace97ff2f799767) Tomas Bjerre *2022-12-04 09:59:36*
 
 
-## 0.0.2 (2022-12-04)
+## bjurr-bom-0.0.2 (2022-12-04)
 
 ### Other changes
 
@@ -108,7 +155,7 @@ Changelog of bjurr-bom.
 [9f7d2](https://github.com/tomasbjerre/bjurr-bom/commit/9f7d214107b4967) Tomas Bjerre *2022-12-04 09:58:23*
 
 
-## 0.0.1 (2022-12-04)
+## bjurr-bom-0.0.1 (2022-12-04)
 
 ### Other changes
 
