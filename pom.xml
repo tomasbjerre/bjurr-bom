@@ -145,7 +145,7 @@
 				<configuration>
 					<readableTagName>.*-(.*)$</readableTagName>
 					<file>CHANGELOG.md</file>
-					<updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>
+					<updatePomWithNextSemanticVersionSuffixSnapshot>false</updatePomWithNextSemanticVersionSuffixSnapshot>
 				</configuration>
 			</plugin>
 			<plugin>
