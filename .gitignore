@@ -1,0 +1,14 @@
+.okhttpcache
+pom.xml.versionsBackup
+.factorypath
+.classpath
+.project
+.settings
+generated-src
+build
+target
+bin
+temp
+.gradle
+.couscous
+couscous.phar
