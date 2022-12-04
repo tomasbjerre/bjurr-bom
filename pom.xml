@@ -153,16 +153,6 @@
 							<file>CHANGELOG.md</file>
 						</configuration>
 					</execution>
-					<execution>
-						<id>GenerateGitChangelogSemanticVersion</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>semantic-version</goal>
-						</goals>
-						<configuration>
-							<updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>
-						</configuration>
-					</execution>
 				</executions>
 			</plugin>
 			<plugin>
