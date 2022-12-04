@@ -141,19 +141,10 @@
 				<groupId>se.bjurr.gitchangelog</groupId>
 				<artifactId>git-changelog-maven-plugin</artifactId>
 				<version>${changelog.version}</version>
-				<executions>
-					<execution>
-						<id>GenerateGitChangelog</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>git-changelog</goal>
-						</goals>
-						<configuration>
-							<readableTagName>.*-(.*)$</readableTagName>
-							<file>CHANGELOG.md</file>
-						</configuration>
-					</execution>
-				</executions>
+				<configuration>
+					<readableTagName>.*-(.*)$</readableTagName>
+					<file>CHANGELOG.md</file>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>se.bjurr.violations</groupId>
