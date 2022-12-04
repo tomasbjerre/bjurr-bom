@@ -92,7 +92,6 @@
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<releaseProfiles>release-sign-artifacts</releaseProfiles>
 					<goals>deploy</goals>
-					<preparationGoals>se.bjurr.gitchangelog:git-changelog-maven-plugin:semantic-version se.bjurr.gitchangelog:git-changelog-maven-plugin:git-changelog clean verify</preparationGoals>
 					<checkModificationExcludeList>
 						CHANGELOG.md,pom.xml
 					</checkModificationExcludeList>
@@ -142,11 +141,29 @@
 				<groupId>se.bjurr.gitchangelog</groupId>
 				<artifactId>git-changelog-maven-plugin</artifactId>
 				<version>${changelog.version}</version>
-				<configuration>
-					<readableTagName>.*-(.*)$</readableTagName>
-					<file>CHANGELOG.md</file>
-					<updatePomWithNextSemanticVersionSuffixSnapshot>false</updatePomWithNextSemanticVersionSuffixSnapshot>
-				</configuration>
+				<executions>
+					<execution>
+						<id>GenerateGitChangelog</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>git-changelog</goal>
+						</goals>
+						<configuration>
+							<readableTagName>.*-(.*)$</readableTagName>
+							<file>CHANGELOG.md</file>
+						</configuration>
+					</execution>
+					<execution>
+						<id>GenerateGitChangelogSemanticVersion</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>semantic-version</goal>
+						</goals>
+						<configuration>
+							<updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>se.bjurr.violations</groupId>
