@@ -95,6 +95,7 @@
 					<checkModificationExcludeList>
 						CHANGELOG.md,pom.xml
 					</checkModificationExcludeList>
+					<completionGoals>se.bjurr.gitchangelog:git-changelog-maven-plugin:semantic-version</completionGoals>
 				</configuration>
 			</plugin>
 			<plugin>
