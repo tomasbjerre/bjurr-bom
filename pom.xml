@@ -95,7 +95,7 @@
 					<checkModificationExcludeList>
 						CHANGELOG.md,pom.xml
 					</checkModificationExcludeList>
-					<completionGoals>se.bjurr.gitchangelog:git-changelog-maven-plugin:semantic-version</completionGoals>
+					<preparationGoals>se.bjurr.gitchangelog:git-changelog-maven-plugin:semantic-version</preparationGoals>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -146,7 +146,7 @@
 					<readableTagName>.*-(.*)$</readableTagName>
 					<file>CHANGELOG.md</file>
 					<ignoreCommitsIfMessageMatches>^\[maven-release-plugin\].*|^\[Gradle Release Plugin\].*|^Merge.*|.*\[GRADLE SCRIPT\].*</ignoreCommitsIfMessageMatches>
-					<updatePomWithNextSemanticVersionSuffixSnapshot>false</updatePomWithNextSemanticVersionSuffixSnapshot>
+					<updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>
 				</configuration>
 			</plugin>
 			<plugin>
