@@ -59,9 +59,10 @@ Release and sign with:
 
 ```sh
 ./mvnw se.bjurr.gitchangelog:git-changelog-maven-plugin:semantic-version \
- release:prepare \
+ release:prepare release:perform -B \
  se.bjurr.gitchangelog:git-changelog-maven-plugin:git-changelog \
- release:perform -B
+  && git commit -a -m "chore: updating changelog" \
+  && git push \
   || git clean -f
 ```
 
