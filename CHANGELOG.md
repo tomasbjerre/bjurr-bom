@@ -2,6 +2,12 @@
 
 Changelog of bjurr-bom.
 
+## 0.3.9 (2023-02-26)
+
+### Bug Fixes
+
+-  failOnError false on Spotbugs ([b6b85](https://github.com/tomasbjerre/bjurr-bom/commit/b6b857a191d2d55) Tomas Bjerre)  
+
 ## 0.3.8 (2022-12-23)
 
 ### Bug Fixes
