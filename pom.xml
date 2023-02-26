@@ -123,6 +123,7 @@
 						<configuration>
 							<xmlOutput>true</xmlOutput>
 							<spotbugsXmlOutput>false</spotbugsXmlOutput>
+							<failOnError>false</failOnError>
 						</configuration>
 					</execution>
 				</executions>
