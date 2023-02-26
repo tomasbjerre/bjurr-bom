@@ -2,6 +2,12 @@
 
 Changelog of bjurr-bom.
 
+## 0.3.10 (2023-02-26)
+
+### Bug Fixes
+
+-  fail on error false ([201fa](https://github.com/tomasbjerre/bjurr-bom/commit/201fafa10ad5afd) Tomas Bjerre)  
+
 ## 0.3.9 (2023-02-26)
 
 ### Bug Fixes
