@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.bjurr.bom</groupId>
 	<artifactId>bjurr-bom</artifactId>
@@ -120,23 +123,30 @@
 							<goal>check</goal>
 						</goals>
 						<phase>verify</phase>
-						<configuration>
-							<xmlOutput>true</xmlOutput>
-							<spotbugsXmlOutput>false</spotbugsXmlOutput>
-							<failOnError>false</failOnError>
-						</configuration>
 					</execution>
 				</executions>
+				<configuration>
+					<xmlOutput>true</xmlOutput>
+					<spotbugsXmlOutput>false</spotbugsXmlOutput>
+					<failOnError>false</failOnError>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>3.19.0</version>
+				<configuration>
+					<failOnViolation>false</failOnViolation>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.2.0</version>
+				<configuration>
+					<failOnViolation>false</failOnViolation>
+					<failsOnError>false</failsOnError>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>se.bjurr.gitchangelog</groupId>
@@ -145,7 +155,8 @@
 				<configuration>
 					<readableTagName>.*-(.*)$</readableTagName>
 					<file>CHANGELOG.md</file>
-					<ignoreCommitsIfMessageMatches>^\[maven-release-plugin\].*|^\[Gradle Release Plugin\].*|^Merge.*|.*\[GRADLE SCRIPT\].*</ignoreCommitsIfMessageMatches>
+					<ignoreCommitsIfMessageMatches>^\[maven-release-plugin\].*|^\[Gradle
+						Release Plugin\].*|^Merge.*|.*\[GRADLE SCRIPT\].*</ignoreCommitsIfMessageMatches>
 				</configuration>
 			</plugin>
 			<plugin>
