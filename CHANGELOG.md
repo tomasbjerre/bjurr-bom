@@ -2,6 +2,12 @@
 
 Changelog of bjurr-bom.
 
+## 0.4.0 (2023-06-26)
+
+### Features
+
+-  support java 17 ([3c011](https://github.com/tomasbjerre/bjurr-bom/commit/3c011d2802df48b) Tomas Bjerre)  
+
 ## 0.3.10 (2023-02-26)
 
 ### Bug Fixes
