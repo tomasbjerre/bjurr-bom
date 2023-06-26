@@ -2,6 +2,12 @@
 
 Changelog of bjurr-bom.
 
+## 0.6.2 (2023-06-26)
+
+### Bug Fixes
+
+-  javadoc sources ([716f1](https://github.com/tomasbjerre/bjurr-bom/commit/716f1f8b38e3079) Tomas Bjerre)  
+
 ## 0.6.1 (2023-06-26)
 
 ### Bug Fixes
