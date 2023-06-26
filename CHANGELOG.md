@@ -2,6 +2,12 @@
 
 Changelog of bjurr-bom.
 
+## 0.5.0 (2023-06-26)
+
+### Features
+
+-  violations.maxViolations ([02f00](https://github.com/tomasbjerre/bjurr-bom/commit/02f00caf4cc771f) Tomas Bjerre)  
+
 ## 0.4.0 (2023-06-26)
 
 ### Features
