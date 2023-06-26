@@ -50,6 +50,7 @@
 		<gpg.version>3.0.1</gpg.version>
 		<fmt.version>2.20</fmt.version>
 		<violations.version>1.50.4</violations.version>
+		<violations.maxViolations>0</violations.maxViolations>
 		<spotbugs.version>4.7.3.0</spotbugs.version>
 	</properties>
 
@@ -169,7 +170,7 @@
 						<configuration>
 							<minSeverity>INFO</minSeverity>
 							<detailLevel>VERBOSE</detailLevel>
-							<maxViolations>99999999</maxViolations>
+							<maxViolations>${violations.maxViolations}</maxViolations>
 							<printViolations>true</printViolations>
 							<violations>
 								<violation>
