@@ -2,6 +2,12 @@
 
 Changelog of bjurr-bom.
 
+## 0.6.0 (2023-06-26)
+
+### Features
+
+-  bundling spotbugs annotations ([d33dc](https://github.com/tomasbjerre/bjurr-bom/commit/d33dcc0751a1922) Tomas Bjerre)  
+
 ## 0.5.0 (2023-06-26)
 
 ### Features
