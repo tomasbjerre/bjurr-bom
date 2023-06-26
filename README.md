@@ -52,6 +52,74 @@ Or as a parent:
 </project>
 ```
 
+## Static code analysis
+
+Spotbugs is bundled. Violations can be ignored with `@SuppressFBWarnings`. Also [Violations Maven Plugin](https://github.com/tomasbjerre/violations-maven-plugin) is used to present, and fail build based on, violations.
+
+```
+mvn verify 
+```
+
+May fail the build with:
+
+```
+[ERROR] org/assertj/snapshot/internal/utils/FileUtilsImpl.java
+|          |               |          |      |                              |
+| Reporter | Rule          | Severity | Line | Message                      |
+|          |               |          |      |                              |
++----------+---------------+----------+------+------------------------------+
+|          |               |          |      |                              |
+| Spotbugs | MS_EXPOSE_REP | INFO     | 30   | Public  static  method   may |
+|          |               |          |      | expose              internal |
+|          |               |          |      | representation by  returning |
+|          |               |          |      | array <p>  A  public  static |
+|          |               |          |      | method returns  a  reference |
+|          |               |          |      | to an array that is part  of |
+|          |               |          |      | the  static  state  of   the |
+|          |               |          |      | class. Any code  that  calls |
+|          |               |          |      | this   method   can   freely |
+|          |               |          |      | modify the underlying array. |
+|          |               |          |      | One fix is to return a  copy |
+|          |               |          |      | of the array.</p>            |
+|          |               |          |      |                              |
++----------+---------------+----------+------+------------------------------+
+Summary of org/assertj/snapshot/internal/utils/FileUtilsImpl.java
+|          |      |      |       |       |
+| Reporter | INFO | WARN | ERROR | Total |
+|          |      |      |       |       |
++----------+------+------+-------+-------+
+|          |      |      |       |       |
+| Spotbugs | 1    | 0    | 0     | 1     |
+|          |      |      |       |       |
++----------+------+------+-------+-------+
+|          |      |      |       |       |
+|          | 1    | 0    | 0     | 1     |
+|          |      |      |       |       |
++----------+------+------+-------+-------+
+
+
+Summary
+|          |      |      |       |       |
+| Reporter | INFO | WARN | ERROR | Total |
+|          |      |      |       |       |
++----------+------+------+-------+-------+
+|          |      |      |       |       |
+| Spotbugs | 1    | 0    | 0     | 1     |
+|          |      |      |       |       |
++----------+------+------+-------+-------+
+|          |      |      |       |       |
+|          | 1    | 0    | 0     | 1     |
+|          |      |      |       |       |
++----------+------+------+-------+-------+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.007 s
+[INFO] Finished at: 2023-06-26T10:40:41+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal se.bjurr.violations:violations-maven-plugin:1.50.4:violations (default) on project assertj-snapshot: Too many violations found, max is 0 but found 1. You can adjust this with the 'maxViolations' configuration parameter. -> [Help 1]
+```
 
 ## Releasing
 
