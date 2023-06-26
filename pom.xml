@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.bjurr.bom</groupId>
 	<artifactId>bjurr-bom</artifactId>
@@ -43,12 +46,12 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.parameters>true</maven.compiler.parameters>
 		<changelog.version>1.95.3</changelog.version>
 		<gpg.version>3.0.1</gpg.version>
-		<fmt.version>2.6.0</fmt.version>
+		<fmt.version>2.20</fmt.version>
 		<violations.version>1.50.4</violations.version>
 		<spotbugs.version>4.7.3.0</spotbugs.version>
 	</properties>
@@ -98,7 +101,7 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>com.coveo</groupId>
+				<groupId>com.spotify.fmt</groupId>
 				<artifactId>fmt-maven-plugin</artifactId>
 				<version>${fmt.version}</version>
 				<executions>
