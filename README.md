@@ -2,7 +2,7 @@
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.bjurr.bom/bjurr-bom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/se.bjurr.bom/bjurr-bom)
 
-Some Maven stuff for my projects.
+Common Maven settings for my projects. Example usage [here](https://github.com/tomasbjerre/assertj-snapshot).
 
 ## Get Maven
 
