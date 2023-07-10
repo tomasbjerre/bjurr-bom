@@ -9,7 +9,7 @@ Common Maven settings for my projects. Example usage [here](https://github.com/t
 You may want to use the [Maven wrapper](https://maven.apache.org/wrapper):
 
 ```sh
-mvn wrapper:wrapper
+mvn wrapper:wrapper -Dmaven=3.8.1
 ```
 
 ## Update dependencies
