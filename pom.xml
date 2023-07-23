@@ -46,10 +46,10 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.parameters>true</maven.compiler.parameters>
-		<changelog.version>1.95.3</changelog.version>
+		<changelog.version>1.97.1</changelog.version>
 		<gpg.version>3.0.1</gpg.version>
 		<fmt.version>2.20</fmt.version>
-		<violations.version>1.50.4</violations.version>
+		<violations.version>1.50.8</violations.version>
 		<violations.maxViolations>0</violations.maxViolations>
 		<spotbugs.version>4.7.3.0</spotbugs.version>
 	</properties>
