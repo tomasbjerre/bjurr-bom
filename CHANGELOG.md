@@ -2,6 +2,20 @@
 
 Changelog of bjurr-bom.
 
+## 0.7.0 (2023-07-23)
+
+### Features
+
+-  updating dependencies ([0edef](https://github.com/tomasbjerre/bjurr-bom/commit/0edef696a818e74) Tomas Bjerre)  
+
+### Other changes
+
+**doc**
+
+
+[7effc](https://github.com/tomasbjerre/bjurr-bom/commit/7effc88749fcfce) Tomas Bjerre *2023-07-10 07:11:52*
+
+
 ## 0.6.2 (2023-06-26)
 
 ### Bug Fixes
