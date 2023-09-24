@@ -286,6 +286,21 @@
 							</execution>
 						</executions>
 					</plugin>
+					<plugin>
+						<groupId>se.bjurr.gitchangelog</groupId>
+						<artifactId>git-changelog-maven-plugin</artifactId>
+						<version>${changelog.version}</version>
+						<configuration>
+							<updatePomWithNextSemanticVersionSuffixSnapshot>
+								false</updatePomWithNextSemanticVersionSuffixSnapshot>
+							<updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
+								false</updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
+							<readableTagName>.*-(.*)$</readableTagName>
+							<ignoreCommitsIfMessageMatches>
+								^\[maven-release-plugin\].*|^Merge.*
+							</ignoreCommitsIfMessageMatches>
+						</configuration>
+					</plugin>
 				</plugins>
 			</build>
 		</profile>
