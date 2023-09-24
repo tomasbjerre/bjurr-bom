@@ -275,14 +275,14 @@
 						<version>${changelog.version}</version>
 						<configuration>
 							<readableTagName>.*-(.*)$</readableTagName>
-							<file>CHANGELOG.md</file>
+							<file>${project.basedir}/CHANGELOG.md</file>
 							<ignoreCommitsIfMessageMatches>^\[maven-release-plugin\].*|^\[Gradle
 								Release Plugin\].*|^Merge.*|.*\[GRADLE
 								SCRIPT\].*</ignoreCommitsIfMessageMatches>
 						</configuration>
 						<executions>
 							<execution>
-								<id>GenerateGitChangelogVersion</id>
+								<id>GenerateGitChangelog</id>
 								<phase>generate-sources</phase>
 								<goals>
 									<goal>semantic-version</goal>
