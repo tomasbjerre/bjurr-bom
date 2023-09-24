@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.bjurr.bom</groupId>
 	<artifactId>bjurr-bom</artifactId>
@@ -47,7 +49,7 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.parameters>true</maven.compiler.parameters>
-		<changelog.version>1.100.1</changelog.version>
+		<changelog.version>1.100.3</changelog.version>
 		<gpg.version>3.0.1</gpg.version>
 		<fmt.version>2.20</fmt.version>
 		<violations.version>1.50.8</violations.version>
@@ -275,9 +277,9 @@
 						<version>${changelog.version}</version>
 						<configuration>
 							<readableTagName>.*-(.*)$</readableTagName>
-							<ignoreCommitsIfMessageMatches>^\[maven-release-plugin\].*|^\[Gradle
-								Release Plugin\].*|^Merge.*|.*\[GRADLE
-								SCRIPT\].*</ignoreCommitsIfMessageMatches>
+							<ignoreCommitsIfMessageMatches>
+								^\[maven-release-plugin\].*|^Merge.*
+							</ignoreCommitsIfMessageMatches>
 						</configuration>
 						<executions>
 							<execution>
