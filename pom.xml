@@ -286,12 +286,6 @@
 								<phase>generate-sources</phase>
 								<goals>
 									<goal>semantic-version</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>GenerateGitChangelogMd</id>
-								<phase>generate-sources</phase>
-								<goals>
 									<goal>git-changelog</goal>
 								</goals>
 							</execution>
