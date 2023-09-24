@@ -136,7 +136,7 @@
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<releaseProfiles>release-sign-artifacts</releaseProfiles>
-					<goals>deploy,git-changelog</goals>
+					<goals>deploy,se.bjurr.gitchangelog:git-changelog-maven-plugin:git-changelog</goals>
 					<checkModificationExcludeList>
 						CHANGELOG.md,pom.xml
 					</checkModificationExcludeList>
