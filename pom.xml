@@ -136,7 +136,7 @@
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<releaseProfiles>release-sign-artifacts</releaseProfiles>
-					<goals>deploy</goals>
+					<goals>deploy,git-changelog</goals>
 					<checkModificationExcludeList>
 						CHANGELOG.md,pom.xml
 					</checkModificationExcludeList>
