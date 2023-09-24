@@ -126,7 +126,7 @@ Summary
 Release and sign with:
 
 ```sh
- release:prepare release:perform -B
+ ./mvnw release:prepare release:perform -B
   || git clean -f
 ```
 
