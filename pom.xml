@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.bjurr.bom</groupId>
 	<artifactId>bjurr-bom</artifactId>
-	<version>0.7.12-SNAPSHOT</version>
+	<version>0.7.11-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Bjurr BOM</name>
 	<description>My BOM.</description>
@@ -143,6 +143,20 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>se.bjurr.gitchangelog</groupId>
+				<artifactId>git-changelog-maven-plugin</artifactId>
+				<version>${changelog.version}</version>
+				<configuration>
+					<updatePomWithNextSemanticVersionSuffixSnapshot>false</updatePomWithNextSemanticVersionSuffixSnapshot>
+					<updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
+						false</updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
+					<readableTagName>.*-(.*)$</readableTagName>
+					<ignoreCommitsIfMessageMatches>
+						^\[maven-release-plugin\].*|^Merge.*
+					</ignoreCommitsIfMessageMatches>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>com.spotify.fmt</groupId>
 				<artifactId>fmt-maven-plugin</artifactId>
 				<version>${fmt.version}</version>
@@ -266,31 +280,6 @@
 								<goals>
 									<goal>sign</goal>
 								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>se.bjurr.gitchangelog</groupId>
-						<artifactId>git-changelog-maven-plugin</artifactId>
-						<version>${changelog.version}</version>
-						<executions>
-							<execution>
-								<id>GitChangelogStuff</id>
-								<phase>generate-resources</phase>
-								<goals>
-									<goal>semantic-version</goal>
-									<goal>git-changelog</goal>
-								</goals>
-								<configuration>
-									<updatePomWithNextSemanticVersionSuffixSnapshot>
-										false</updatePomWithNextSemanticVersionSuffixSnapshot>
-									<updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
-										false</updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
-									<readableTagName>.*-(.*)$</readableTagName>
-									<ignoreCommitsIfMessageMatches>
-										^\[maven-release-plugin\].*|^Merge.*
-									</ignoreCommitsIfMessageMatches>
-								</configuration>
 							</execution>
 						</executions>
 					</plugin>
