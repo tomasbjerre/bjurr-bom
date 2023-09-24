@@ -47,7 +47,7 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.parameters>true</maven.compiler.parameters>
-		<changelog.version>1.100.0</changelog.version>
+		<changelog.version>1.100.1</changelog.version>
 		<gpg.version>3.0.1</gpg.version>
 		<fmt.version>2.20</fmt.version>
 		<violations.version>1.50.8</violations.version>
@@ -275,7 +275,6 @@
 						<version>${changelog.version}</version>
 						<configuration>
 							<readableTagName>.*-(.*)$</readableTagName>
-							<file>${project.basedir}/CHANGELOG.md</file>
 							<ignoreCommitsIfMessageMatches>^\[maven-release-plugin\].*|^\[Gradle
 								Release Plugin\].*|^Merge.*|.*\[GRADLE
 								SCRIPT\].*</ignoreCommitsIfMessageMatches>
