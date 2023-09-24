@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.bjurr.bom</groupId>
 	<artifactId>bjurr-bom</artifactId>
@@ -46,7 +49,7 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.parameters>true</maven.compiler.parameters>
-		<changelog.version>1.97.1</changelog.version>
+		<changelog.version>1.100.0</changelog.version>
 		<gpg.version>3.0.1</gpg.version>
 		<fmt.version>2.20</fmt.version>
 		<violations.version>1.50.8</violations.version>
@@ -190,17 +193,6 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>se.bjurr.gitchangelog</groupId>
-				<artifactId>git-changelog-maven-plugin</artifactId>
-				<version>${changelog.version}</version>
-				<configuration>
-					<readableTagName>.*-(.*)$</readableTagName>
-					<file>CHANGELOG.md</file>
-					<ignoreCommitsIfMessageMatches>^\[maven-release-plugin\].*|^\[Gradle
-						Release Plugin\].*|^Merge.*|.*\[GRADLE SCRIPT\].*</ignoreCommitsIfMessageMatches>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>se.bjurr.violations</groupId>
 				<artifactId>violations-maven-plugin</artifactId>
 				<version>${violations.version}</version>
@@ -275,6 +267,27 @@
 								<phase>verify</phase>
 								<goals>
 									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>se.bjurr.gitchangelog</groupId>
+						<artifactId>git-changelog-maven-plugin</artifactId>
+						<version>${changelog.version}</version>
+						<configuration>
+							<readableTagName>.*-(.*)$</readableTagName>
+							<file>CHANGELOG.md</file>
+							<ignoreCommitsIfMessageMatches>^\[maven-release-plugin\].*|^\[Gradle
+								Release Plugin\].*|^Merge.*|.*\[GRADLE
+								SCRIPT\].*</ignoreCommitsIfMessageMatches>
+						</configuration>
+						<executions>
+							<execution>
+								<id>GenerateGitChangelog</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>semantic-version</goal>
 								</goals>
 							</execution>
 						</executions>
