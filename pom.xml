@@ -137,9 +137,9 @@
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<releaseProfiles>release-sign-artifacts</releaseProfiles>
 					<preparationGoals>
-						se.bjurr.gitchangelog:git-changelog-maven-plugin:git-changelog</preparationGoals>
+						se.bjurr.gitchangelog:git-changelog-maven-plugin:git-changelog,se.bjurr.gitchangelog:git-changelog-maven-plugin:semantic-version</preparationGoals>
 					<goals>
-						se.bjurr.gitchangelog:git-changelog-maven-plugin:semantic-version,deploy</goals>
+						se.bjurr.gitchangelog:git-changelog-maven-plugin:git-changelog,se.bjurr.gitchangelog:git-changelog-maven-plugin:semantic-version,deploy</goals>
 					<checkModificationExcludeList>
 						CHANGELOG.md,pom.xml
 					</checkModificationExcludeList>
