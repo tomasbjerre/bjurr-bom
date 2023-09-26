@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.bjurr.bom</groupId>
 	<artifactId>bjurr-bom</artifactId>
-	<version>0.9.1-SNAPSHOT</version>
+	<version>0.8.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Bjurr BOM</name>
 	<description>My BOM.</description>
@@ -12,7 +12,7 @@
 	<scm>
 		<developerConnection>scm:git:git@github.com:tomasbjerre/bjurr-bom.git</developerConnection>
 		<url>https://github.com/tomasbjerre/bjurr-bom</url>
-		<tag>HEAD</tag>
+		<tag>bjurr-bom-0.7.11</tag>
 	</scm>
 
 	<distributionManagement>
@@ -46,7 +46,7 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.parameters>true</maven.compiler.parameters>
-		<changelog.version>1.97.1</changelog.version>
+		<changelog.version>1.100.3</changelog.version>
 		<gpg.version>3.0.1</gpg.version>
 		<fmt.version>2.20</fmt.version>
 		<violations.version>1.50.8</violations.version>
@@ -135,10 +135,25 @@
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<releaseProfiles>release-sign-artifacts</releaseProfiles>
-					<goals>deploy</goals>
+					<preparationGoals>
+						se.bjurr.gitchangelog:git-changelog-maven-plugin:git-changelog,se.bjurr.gitchangelog:git-changelog-maven-plugin:semantic-version</preparationGoals>
 					<checkModificationExcludeList>
 						CHANGELOG.md,pom.xml
 					</checkModificationExcludeList>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>se.bjurr.gitchangelog</groupId>
+				<artifactId>git-changelog-maven-plugin</artifactId>
+				<version>${changelog.version}</version>
+				<configuration>
+					<updatePomWithNextSemanticVersionSuffixSnapshot>false</updatePomWithNextSemanticVersionSuffixSnapshot>
+					<updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
+						false</updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
+					<readableTagName>.*-(.*)$</readableTagName>
+					<ignoreCommitsIfMessageMatches>
+						^\[maven-release-plugin\].*|^Merge.*
+					</ignoreCommitsIfMessageMatches>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -187,17 +202,6 @@
 				<configuration>
 					<failOnViolation>false</failOnViolation>
 					<failsOnError>false</failsOnError>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>se.bjurr.gitchangelog</groupId>
-				<artifactId>git-changelog-maven-plugin</artifactId>
-				<version>${changelog.version}</version>
-				<configuration>
-					<readableTagName>.*-(.*)$</readableTagName>
-					<file>CHANGELOG.md</file>
-					<ignoreCommitsIfMessageMatches>^\[maven-release-plugin\].*|^\[Gradle
-						Release Plugin\].*|^Merge.*|.*\[GRADLE SCRIPT\].*</ignoreCommitsIfMessageMatches>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -279,9 +283,33 @@
 							</execution>
 						</executions>
 					</plugin>
+					<plugin>
+						<groupId>se.bjurr.gitchangelog</groupId>
+						<artifactId>git-changelog-maven-plugin</artifactId>
+						<version>${changelog.version}</version>
+						<executions>
+							<execution>
+								<id>GitChangelogStuff</id>
+								<phase>generate-resources</phase>
+								<goals>
+									<goal>semantic-version</goal>
+									<goal>git-changelog</goal>
+								</goals>
+								<configuration>
+									<updatePomWithNextSemanticVersionSuffixSnapshot>
+										false</updatePomWithNextSemanticVersionSuffixSnapshot>
+									<updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
+										false</updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
+									<readableTagName>.*-(.*)$</readableTagName>
+									<ignoreCommitsIfMessageMatches>
+										^\[maven-release-plugin\].*|^Merge.*
+									</ignoreCommitsIfMessageMatches>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
 				</plugins>
 			</build>
 		</profile>
 	</profiles>
-
 </project>
