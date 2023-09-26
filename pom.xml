@@ -133,6 +133,7 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<version>3.0.0-M4</version>
 				<configuration>
+					<scmShallowClone>false</scmShallowClone>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<releaseProfiles>release-sign-artifacts</releaseProfiles>
 					<preparationGoals>
