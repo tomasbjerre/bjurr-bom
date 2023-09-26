@@ -2,6 +2,20 @@
 
 Changelog of bjurr-bom.
 
+## 0.8.1 (2023-09-24)
+
+### Features
+
+-  stepping git-changelog-maven-plugin ([f8ec9](https://github.com/tomasbjerre/bjurr-bom/commit/f8ec9e8fc04055d) Tomas Bjerre)  
+
+## 0.8.0 (2023-09-24)
+
+### Features
+
+-  stepping git-changelog-maven-plugin ([8af54](https://github.com/tomasbjerre/bjurr-bom/commit/8af54e54cb90e94) Tomas Bjerre)  
+-  stepping git-changelog-maven-plugin ([eee44](https://github.com/tomasbjerre/bjurr-bom/commit/eee449534922ea3) Tomas Bjerre)  
+-  stepping git-changelog-maven-plugin ([ffc02](https://github.com/tomasbjerre/bjurr-bom/commit/ffc02bb8502bf28) Tomas Bjerre)  
+
 ## 0.7.11 (2023-09-24)
 
 ### Features
