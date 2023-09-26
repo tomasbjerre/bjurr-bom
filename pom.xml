@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.bjurr.bom</groupId>
 	<artifactId>bjurr-bom</artifactId>
-	<version>0.8.7-SNAPSHOT</version>
+	<version>0.9.4-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Bjurr BOM</name>
 	<description>My BOM.</description>
@@ -133,16 +133,8 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<version>3.0.1</version>
 				<configuration>
-					<scmShallowClone>false</scmShallowClone>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<releaseProfiles>release-sign-artifacts</releaseProfiles>
-					<preparationGoals>
-						se.bjurr.gitchangelog:git-changelog-maven-plugin:semantic-version</preparationGoals>
-					<completionGoals>
-						se.bjurr.gitchangelog:git-changelog-maven-plugin:git-changelog</completionGoals>
-					<checkModificationExcludeList>
-						CHANGELOG.md,pom.xml
-					</checkModificationExcludeList>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -150,7 +142,7 @@
 				<artifactId>git-changelog-maven-plugin</artifactId>
 				<version>${changelog.version}</version>
 				<configuration>
-					<updatePomWithNextSemanticVersionSuffixSnapshot>false</updatePomWithNextSemanticVersionSuffixSnapshot>
+					<updatePomWithCurrentSemanticVersionSuffixSnapshot>true</updatePomWithCurrentSemanticVersionSuffixSnapshot>
 					<updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
 						false</updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
 					<readableTagName>.*-(.*)$</readableTagName>
@@ -283,31 +275,6 @@
 								<goals>
 									<goal>sign</goal>
 								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>se.bjurr.gitchangelog</groupId>
-						<artifactId>git-changelog-maven-plugin</artifactId>
-						<version>${changelog.version}</version>
-						<executions>
-							<execution>
-								<id>GitChangelogStuff</id>
-								<phase>generate-resources</phase>
-								<goals>
-									<goal>semantic-version</goal>
-									<goal>git-changelog</goal>
-								</goals>
-								<configuration>
-									<updatePomWithNextSemanticVersionSuffixSnapshot>
-										false</updatePomWithNextSemanticVersionSuffixSnapshot>
-									<updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
-										false</updatePomWithCurrentSemanticVersionSuffixSnapshotIfNotTagged>
-									<readableTagName>.*-(.*)$</readableTagName>
-									<ignoreCommitsIfMessageMatches>
-										^\[maven-release-plugin\].*|^Merge.*
-									</ignoreCommitsIfMessageMatches>
-								</configuration>
 							</execution>
 						</executions>
 					</plugin>
