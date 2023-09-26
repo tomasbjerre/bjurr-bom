@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.bjurr.bom</groupId>
 	<artifactId>bjurr-bom</artifactId>
-	<version>0.9.4-SNAPSHOT</version>
+	<version>0.9.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Bjurr BOM</name>
 	<description>My BOM.</description>
@@ -135,6 +135,7 @@
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<releaseProfiles>release-sign-artifacts</releaseProfiles>
+					<checkModificationExcludeList>pom.xml</checkModificationExcludeList>
 				</configuration>
 			</plugin>
 			<plugin>
