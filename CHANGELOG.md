@@ -2,6 +2,18 @@
 
 Changelog of bjurr-bom.
 
+## 0.8.6 (2023-09-26)
+
+### Bug Fixes
+
+-  trying to set property to use with Maven Release Plugin ([0b05b](https://github.com/tomasbjerre/bjurr-bom/commit/0b05bda57b59c20) Tomas Bjerre)  
+
+## 0.8.5 (2023-09-26)
+
+### Bug Fixes
+
+-  trying to set property to use with Maven Release Plugin ([0775c](https://github.com/tomasbjerre/bjurr-bom/commit/0775c94f7e6296d) Tomas Bjerre)  
+
 ## 0.8.4 (2023-09-26)
 
 ### Bug Fixes
